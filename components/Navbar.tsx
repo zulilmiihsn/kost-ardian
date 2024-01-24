@@ -9,11 +9,11 @@ const aleo = Aleo({ subsets: ["latin"] });
 
 export default function Navbar() {
   return (
-    <nav className="bg-transparent w-full top-0 flex justify-between px-12 py-4 fixed">
+    <nav className="bg-transparent w-[100dvw] top-0 flex justify-between px-12 py-4 fixed z-10">
       <div className="flex justify-between w-full">
         <h1 className={`text-white ${alatsi.className} text-4xl`}>A</h1>
         <button
-          className={`rounded-full py-2 px-3 w-[10%] bg-primarydark80 backdrop-blur-sm ${aleo.className} text-secondary`}
+          className={`rounded-full py-2 px-3 md:w-[10%] bg-primarydark80 lg:backdrop-blur-sm ${aleo.className} text-secondary`}
         >
           Login
         </button>

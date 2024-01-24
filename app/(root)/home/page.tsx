@@ -3,20 +3,20 @@ export default function Home() {
   return (
     <main>
       <article className="flex flex-col justify-center items-center h-screen gap-4 text-center text-white">
-        <h1 className="text-3xl">
+        <h1 className="text-3xl px-12">
           Ardian Boarding House: <b>Where Fun Living Begins!</b>
         </h1>
-        <p className="w-[40%]">
+        <p className="px-8 md:p-0 md:w-[40%]">
           Ardian Boarding House is the finest with its outstanding members being
           great and prosperous individuals.
         </p>
         <button
-          className={`rounded-full bg-white py-2 px-3 text-black w-fit flex justify-center gap-1 items-center`}
+          className={`rounded-full bg-white py-2 px-3 text-black w-fit flex justify-center gap-1 items-center hover:drop-shadow-glow hover:-translate-y-1 transition ease-in-out`}
         >
           Book<b>now!</b>
         </button>
       </article>
-      <section className="h-screen flex flex-col gap-16">
+      <section className="md:h-screen flex flex-col gap-16">
         <Marquee className="flex flex-row gap-4">
           <div className="flex flex-row gap-4">
             <button className="aspect-square w-48 rounded-xl bg-red-400 flex-none hover:scale-105 transition ease-in-out"></button>
@@ -27,13 +27,13 @@ export default function Home() {
             <button className="aspect-square w-48 rounded-xl bg-red-400 flex-none hover:scale-105 transition ease-in-out"></button>
             <button className="aspect-square w-48 rounded-xl bg-red-400 flex-none hover:scale-105 transition ease-in-out"></button>
             <button className="aspect-square w-48 rounded-xl bg-red-400 flex-none hover:scale-105 transition ease-in-out"></button>
-            <button className="aspect-square w-48 rounded-xl bg-red-400 flex-none hover:scale-105 transition ease-in-out"></button>
+            <button className="aspect-square w-48 rounded-xl bg-red-400 flex-none hover:-translate-y-1 transition ease-in-out"></button>
           </div>
         </Marquee>
         <menu className="flex flex-col justify-around gap-8 px-12">
           <h1 className="text-white text-xl text-center">Fasilitas</h1>
-          <div className="flex flex-row gap-2 justify-center">
-            <button className=" w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start">
+          <div className="flex md:flex-row flex-col gap-4 justify-center">
+            <button className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
               <div className="h-4/5 p-8">
                 <h1 className="font-bold text-lg">Dapur Umum</h1>
                 <p className="text-lg pr-12">
@@ -49,6 +49,7 @@ export default function Home() {
                   viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="group-hover:rotate-90 transition ease-in-out"
                 >
                   <path
                     fill-rule="evenodd"
@@ -59,7 +60,7 @@ export default function Home() {
                 </svg>
               </div>
             </button>
-            <button className=" w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start">
+            <button className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
               <div className="h-4/5 p-8">
                 <h1 className="font-bold text-lg">Wifi Kencang</h1>
                 <p className="text-lg pr-12">
@@ -75,6 +76,7 @@ export default function Home() {
                   viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="group-hover:rotate-90 transition ease-in-out"
                 >
                   <path
                     fill-rule="evenodd"
@@ -85,7 +87,7 @@ export default function Home() {
                 </svg>
               </div>
             </button>
-            <button className=" w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start">
+            <button className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
               <div className="h-4/5 p-8">
                 <h1 className="font-bold text-lg">Lemari & Kasur</h1>
                 <p className="text-lg pr-12">
@@ -101,6 +103,7 @@ export default function Home() {
                   viewBox="0 0 21 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="group-hover:rotate-90 transition ease-in-out"
                 >
                   <path
                     fill-rule="evenodd"
@@ -118,22 +121,45 @@ export default function Home() {
         <h1 className="text-white text-4xl font-bold">
           Shared moment showcase
         </h1>
-        <div className="flex flex-row gap-2 overflow-hidden h-1/2">
-          <div className="aspect-square w-1/3 bg-blue-400 rounded-xl flex-none">
-            .
+        <div className="flex flex-row gap-2 h-1/2 overflow-y-visible overflow-x-clip">
+          <div className="aspect-square md:w-1/3 bg-blue-400 rounded-xl flex-none relative">
+            <img
+              src="/img/1.webp"
+              alt=""
+              className="rounded-xl w-full h-full object-cover"
+            />
+            <sub className="absolute -bottom-4 left-2 z-10 text-white opacity-65 font-medium">
+              08-12-2023
+            </sub>
           </div>
-          <div className="aspect-square w-1/3 bg-blue-400 rounded-xl flex-none">
-            .
+          <div className="aspect-square md:w-1/3 bg-blue-400 rounded-xl flex-none relative">
+            <img
+              src="/img/2.webp"
+              alt=""
+              className="rounded-xl w-full h-full object-cover"
+            />
+            <sub className="absolute -bottom-4 left-2 z-10 text-white opacity-65 font-medium">
+              08-12-2023
+            </sub>
           </div>
-          <div className="aspect-square w-1/3 bg-blue-400 rounded-xl flex-none">
-            .
+          <div className="aspect-square md:w-1/3 bg-blue-400 rounded-xl flex-none relative">
+            <img
+              src="/img/3.webp"
+              alt=""
+              className="rounded-xl w-full h-full object-cover"
+            />
+            <sub className="absolute -bottom-4 left-2 z-10 text-white opacity-65 font-medium">
+              08-12-2023
+            </sub>
           </div>
-          <div className="aspect-square w-1/3 bg-blue-400 rounded-xl flex-none">
+          <div className="aspect-square md:w-1/3 bg-blue-400 rounded-xl flex-none">
             .
           </div>
         </div>
         <div className="w-fit flex flex-row gap-1">
-          <button className="aspect-square w-12 rounded-full bg-white grid place-content-center">
+          <button
+            className="aspect-square w-12 rounded-full bg-white grid place-content-center"
+          >
             <svg
               width="20"
               height="20"
