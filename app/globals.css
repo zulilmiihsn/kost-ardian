@@ -13,3 +13,16 @@
 ::-webkit-scrollbar {
   @apply hidden
 }
+
+@keyframes slide-up {
+  from {
+    transform: translateY(15%); /* Mulai dari luar layar ke bawah */
+  }
+  to {
+    transform: translateY(0); /* Akhir di posisi normal */
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.2s ease-out;
+}

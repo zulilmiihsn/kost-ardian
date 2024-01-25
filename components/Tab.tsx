@@ -19,7 +19,7 @@ export default function Tab() {
 const pathname = usePathname()
   return (
     <div className="w-[100dvw] flex justify-center fixed top-0 py-4 z-10">
-      <div className="rounded-full flex flex-row gap-1 items-center bg-primarydark80 p-1 justify-between md:backdrop-blur-sm">
+      <div className="rounded-full flex flex-row gap-1 items-center bg-primarydark80 p-1 justify-between md:backdrop-blur-sm drop-shadow-xl">
         <Link onMouseEnter={hoverSounds} onClick={clickSounds}
           className={`${pathname === '/home' ? 'text-black bg-white' : 'text-secondary' } rounded-full border py-1 px-2 hover:drop-shadow-glow hover:-translate-y-1 transition ease-in-out ${aleo.className}`}
           href="/home"
