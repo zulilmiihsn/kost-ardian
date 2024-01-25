@@ -9,7 +9,7 @@ const aleo = Aleo({ subsets: ["latin"] });
 
 export default function Navbar() {
   return (
-    <nav className="bg-transparent w-[100dvw] top-0 flex justify-between px-12 py-4 fixed z-10">
+    <nav className="bg-transparent w-[100vw] top-0 flex justify-between px-12 py-4 fixed z-10">
       <div className="flex justify-between w-full">
         <h1 className={`text-white ${alatsi.className} text-4xl drop-shadow-xl`}>A</h1>
         <button
