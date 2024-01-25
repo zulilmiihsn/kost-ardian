@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 output: 'export',
-basePath: '/kost-ardian/tree/dev/public',
+basePath: 'https://github.com/zulilmiihsn/kost-ardian',
 }
 
 module.exports = nextConfig
