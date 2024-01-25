@@ -41,9 +41,6 @@ export default function Footer() {
           </svg>
         </div>
       </div>
-      <div className="mx-auto p-2">
-        <p>Zul Ilmi Ihsan 2024</p>
-      </div>
     </footer>
   );
 }
