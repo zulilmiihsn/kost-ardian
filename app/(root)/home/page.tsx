@@ -1,4 +1,16 @@
+'use client'
 import Marquee from "react-fast-marquee";
+
+const hoverSounds = () => {
+  const audioElement = new Audio('assets/hover.flac');
+  audioElement.play();
+}
+
+const clickSounds = () => {
+  const audioElement = new Audio('assets/click.mp3');
+  audioElement.play();
+}
+
 export default function Home() {
   return (
     <main>
@@ -10,7 +22,7 @@ export default function Home() {
           Ardian Boarding House is the finest with its outstanding members being
           great and prosperous individuals.
         </p>
-        <button
+        <button onMouseEnter={hoverSounds} onClick={clickSounds}
           className={`rounded-full bg-white py-2 px-3 text-black w-fit flex justify-center gap-1 items-center hover:drop-shadow-glow hover:-translate-y-1 transition ease-in-out`}
         >
           Book<b>now!</b>
@@ -33,7 +45,7 @@ export default function Home() {
         <menu className="flex flex-col justify-around gap-8 px-12">
           <h1 className="text-white text-xl text-center">Fasilitas</h1>
           <div className="flex md:flex-row flex-col gap-4 justify-center">
-            <button className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
+            <button onMouseEnter={hoverSounds} className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
               <div className="h-4/5 p-8">
                 <h1 className="font-bold text-lg">Dapur Umum</h1>
                 <p className="text-lg pr-12">
@@ -60,7 +72,7 @@ export default function Home() {
                 </svg>
               </div>
             </button>
-            <button className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
+            <button onMouseEnter={hoverSounds} className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
               <div className="h-4/5 p-8">
                 <h1 className="font-bold text-lg">Wifi Kencang</h1>
                 <p className="text-lg pr-12">
@@ -87,7 +99,7 @@ export default function Home() {
                 </svg>
               </div>
             </button>
-            <button className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
+            <button onMouseEnter={hoverSounds} className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out">
               <div className="h-4/5 p-8">
                 <h1 className="font-bold text-lg">Lemari & Kasur</h1>
                 <p className="text-lg pr-12">
