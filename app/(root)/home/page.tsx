@@ -82,12 +82,12 @@ export default function Home() {
           </div>
         </Marquee>
         <div
-          className={`absolute z-30 h-[120dvh] w-[100dvw] backdrop-brightness-50 ${
+          className={`fixed z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[100vh] w-[100vw] backdrop-brightness-50 ${
             modal1 ? "flex" : "hidden"
           }`}
         >
           <div className="w-screen h-screen flex justify-center items-center">
-            <div className="animate-slide-up w-[80%] md:w-1/2 h-max bg-main bg-opacity-10 rounded-xl flex flex-col p-4">
+            <div className="animate-slide-up w-[80%] md:w-1/2 h-max bg-main rounded-xl flex flex-col p-4">
               <div className="flex justify-between">
               <h1 className="text-xl text-white font-bold">Kamar Lt. 1</h1>
                 <button onClick={modalClick1}>
@@ -122,12 +122,12 @@ export default function Home() {
           </div>
         </div>
         <div
-          className={`absolute z-30 h-[120dvh] w-[100dvw] backdrop-brightness-50 ${
+          className={`fixed z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[100vh] w-[100vw] backdrop-brightness-50 ${
             modal2 ? "flex" : "hidden"
           }`}
         >
           <div className="w-screen h-screen flex justify-center items-center">
-          <div className="animate-slide-up w-[80%] md:w-1/2 h-max bg-main bg-opacity-10 rounded-xl flex flex-col p-4">
+          <div className="animate-slide-up w-[80%] md:w-1/2 h-max bg-main rounded-xl flex flex-col p-4">
               <div className="flex justify-between">
               <h1 className="text-lg text-white font-bold">Kamar Lt. 2</h1>
                 <button onClick={modalClick2}>
@@ -162,12 +162,12 @@ export default function Home() {
           </div>
         </div>
         <div
-          className={`absolute z-30 h-[120dvh] w-[100dvw] backdrop-brightness-50 ${
+          className={`fixed z-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[100vh] w-[100vw] backdrop-brightness-50 ${
             modal3 ? "flex" : "hidden"
           }`}
         >
           <div className="w-screen h-screen flex justify-center items-center">
-          <div className="animate-slide-up w-[80%] md:w-1/2 h-max bg-main bg-opacity-10 rounded-xl flex flex-col p-4">
+          <div className="animate-slide-up w-[80%] md:w-1/2 h-max bg-main rounded-xl flex flex-col p-4">
               <div className="flex justify-between">
               <h1 className="text-lg text-white font-bold">Kamar Lt. 3</h1>
                 <button onClick={modalClick3}>
