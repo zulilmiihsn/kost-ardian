@@ -1,5 +1,7 @@
 "use client";
 import Marquee from "react-fast-marquee";
+import ProfileModal from "@/components/ProfileModal";
+import profileData from "@/app/database/profiles.json";
 import { useState, useRef } from "react";
 import { Kamar1, Kamar2, Kamar3 } from "@/components/Modal";
 
@@ -50,6 +52,14 @@ export default function Home() {
     clickSounds();
   }
 
+  const [selectedProfile, setSelectedProfile] = useState(null);
+
+  // Function to handle profile click
+  const profileClick = (profile: any) => {
+    setSelectedProfile(profile);
+    clickSounds();
+  };
+
   return (
     <main>
       <article className="flex flex-col justify-center items-center h-screen gap-4 text-center text-white">
@@ -65,23 +75,31 @@ export default function Home() {
           onClick={clickSounds}
           className={`rounded-full bg-white py-2 px-3 text-black w-fit flex justify-center gap-1 items-center hover:drop-shadow-glow hover:-translate-y-1 transition ease-in-out active:translate-y-1`}
         >
-          <h1 className="flex gap-1">Book<b>now!</b></h1>
+          <h1 className="flex gap-1">
+            Book<b>now!</b>
+          </h1>
         </button>
       </article>
       <section className="md:h-screen flex flex-col gap-16">
         <Marquee className="flex flex-row gap-4">
           <div className="flex flex-row gap-4">
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-red-300 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/1.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-blue-400 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/2.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-green-300 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/3.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-yellow-400 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/1.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-blue-400 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/2.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-yellow-400 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/3.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-green-300 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/1.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-red-300 flex-none hover:scale-105 transition ease-in-out grid place-content-center"><img src="/char/2.png"></img></button>
-            <button onMouseEnter={hoverSounds} onClick={clickSounds} className="aspect-square w-48 rounded-xl bg-green-300 flex-none hover:-translate-y-1 transition ease-in-out grid place-content-center"><img src="/char/3.png"></img></button>
+            {profileData.map((profile) => (
+              <button
+                key={profile.id} // Make sure each profile has a unique identifier
+                onMouseEnter={hoverSounds}
+                onClick={() => profileClick(profile)}
+                className="aspect-square w-48 rounded-xl bg-red-300 flex-none hover:scale-105 transition ease-in-out grid place-content-center"
+              >
+                <img src={profile.imageSrc} alt={profile.name} />
+              </button>
+            ))}
           </div>
         </Marquee>
+        <ProfileModal
+          isOpen={!!selectedProfile}
+          onClose={() => setSelectedProfile(null)}
+          profileData={selectedProfile || {}}
+        />
         <menu className="flex flex-col justify-around gap-8 px-12 relative">
           <h1 className="text-white text-xl text-center">Tipe Kamar</h1>
           <div className="flex md:flex-row flex-col gap-4 justify-center">
@@ -116,7 +134,7 @@ export default function Home() {
                 </svg>
               </div>
             </button>
-            <Kamar1  isOpen={modal1} onClose={modalClick1}/>
+            <Kamar1 isOpen={modal1} onClose={modalClick1} />
             <button
               onClick={modalClick2}
               onMouseEnter={hoverSounds}
@@ -148,7 +166,7 @@ export default function Home() {
                 </svg>
               </div>
             </button>
-            <Kamar2 isOpen={modal2} onClose={modalClick2}/>
+            <Kamar2 isOpen={modal2} onClose={modalClick2} />
             <button
               onClick={modalClick3}
               onMouseEnter={hoverSounds}
@@ -180,7 +198,7 @@ export default function Home() {
                 </svg>
               </div>
             </button>
-            <Kamar3 isOpen={modal3} onClose={modalClick3}/>
+            <Kamar3 isOpen={modal3} onClose={modalClick3} />
           </div>
         </menu>
       </section>
@@ -188,7 +206,10 @@ export default function Home() {
         <h1 className="text-white text-4xl font-bold">
           Shared moment showcase
         </h1>
-        <div className="flex flex-row gap-2 h-1/2 overflow-x-scroll whitespace-nowrap transition ease-in-out" ref={carouselRef}>
+        <div
+          className="flex flex-row gap-2 h-1/2 overflow-x-scroll whitespace-nowrap transition ease-in-out rounded-xl"
+          ref={carouselRef}
+        >
           <div className="aspect-square md:w-1/3 bg-blue-400 rounded-xl flex-none relative">
             <img
               src="/img/1.webp"
@@ -218,7 +239,11 @@ export default function Home() {
           </div>
         </div>
         <div className="w-fit flex flex-row gap-1">
-          <button onMouseEnter={hoverSounds} onClick={scrollLeft} className="aspect-square w-12 rounded-full bg-white grid place-content-center hover:drop-shadow-glow transition ease-in-out hover:-translate-y-1 active:translate-y-1">
+          <button
+            onMouseEnter={hoverSounds}
+            onClick={scrollLeft}
+            className="aspect-square w-12 rounded-full bg-white grid place-content-center hover:drop-shadow-glow transition ease-in-out active:translate-y-1"
+          >
             <svg
               width="20"
               height="20"
@@ -234,7 +259,11 @@ export default function Home() {
               />
             </svg>
           </button>
-          <button onMouseEnter={hoverSounds} onClick={scrollRight} className="aspect-square w-12 rounded-full bg-white grid place-content-center hover:drop-shadow-glow transition ease-in-out active:translate-y-1 hover:-translate-y-1">
+          <button
+            onMouseEnter={hoverSounds}
+            onClick={scrollRight}
+            className="aspect-square w-12 rounded-full bg-white grid place-content-center hover:drop-shadow-glow transition ease-in-out active:translate-y-1"
+          >
             <svg
               width="20"
               height="20"

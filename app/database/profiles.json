@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Zul",
+    "imageSrc": "/char/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Evan",
+    "imageSrc": "/char/2.png"
+  },
+  {
+    "id": 3,
+    "name": "Adit",
+    "imageSrc": "/char/3.png"
+  },
+  {
+    "id": 4,
+    "name": "Ben",
+    "imageSrc": "/char/2.png"
+  },
+  {
+    "id": 5,
+    "name": "Ananta",
+    "imageSrc": "/char/2.png"
+  },
+  {
+    "id": 6,
+    "name": "Fransco",
+    "imageSrc": "/char/1.png"
+  },
+  {
+    "id": 7,
+    "name": "Ardian",
+    "imageSrc": "/char/3.png"
+  }
+]
