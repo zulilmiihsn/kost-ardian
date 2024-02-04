@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Tab from "@/components/Tab";
 import Starfield from 'react-starfield'
+import React from "react";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Kost Ardian",
@@ -14,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <React.Fragment>
       <Starfield
         starCount={1000}
         starColor={[255, 255, 255]}
@@ -25,6 +26,6 @@ export default function RootLayout({
       <Tab />
       {children}
       <Footer />
-    </div>
+    </React.Fragment>
   );
 }

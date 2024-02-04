@@ -1,37 +1,51 @@
 [
   {
-    "id": 1,
     "name": "Zul",
-    "imageSrc": "/char/1.png"
+    "room": "Kamar M, Lt. 1",
+    "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
+    "imageSrc": "/char/1.png",
+    "bgColor": "bg-red-300"
   },
   {
-    "id": 2,
     "name": "Evan",
-    "imageSrc": "/char/2.png"
+    "room": "Kamar M, Lt. 1",
+    "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
+    "imageSrc": "/char/2.png",
+    "bgColor": "bg-blue-400"
   },
   {
-    "id": 3,
     "name": "Adit",
-    "imageSrc": "/char/3.png"
+    "room": "Kamar M, Lt. 1",
+    "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
+    "imageSrc": "/char/3.png",
+    "bgColor": "bg-blue-400"
   },
   {
-    "id": 4,
     "name": "Ben",
-    "imageSrc": "/char/2.png"
+    "room": "Kamar M, Lt. 1",
+    "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
+    "imageSrc": "/char/2.png",
+    "bgColor": "bg-green-300"
   },
   {
-    "id": 5,
     "name": "Ananta",
-    "imageSrc": "/char/2.png"
+    "room": "Kamar M, Lt. 1",
+    "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
+    "imageSrc": "/char/2.png",
+    "bgColor": "bg-red-300"
   },
   {
-    "id": 6,
     "name": "Fransco",
-    "imageSrc": "/char/1.png"
+    "room": "Kamar M, Lt. 1",
+    "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
+    "imageSrc": "/char/1.png",
+    "bgColor": "bg-blue-400"
   },
   {
-    "id": 7,
     "name": "Ardian",
-    "imageSrc": "/char/3.png"
+    "room": "Kamar M, Lt. 1",
+    "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
+    "imageSrc": "/char/3.png",
+    "bgColor": "bg-green-500"
   }
 ]

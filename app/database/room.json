@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Kamar Lt. 1",
+        "price": "450k/bulan",
+        "shortdesc": "Dilengkapi dengan kasur, bantal, guling dan lemari. Luas 3x4m",
+        "desc": "Dilengkapi dengan kasur, bantal, guling dan lemari di tiap kamarnya. Lantai 1 memiliki dapur umum serta dua kamar mandi bersama. Sementara gas pada dapur umum dibayar dengan sistem urunan bersama penghuni lainnya"
+    },
+    {
+        "name": "Kamar Lt. 2",
+        "price": "550k/bulan",
+        "shortdesc": "Dilengkapi dengan kasur, bantal, guling dan lemari. Luas 3x4m",
+        "desc": "Dilengkapi dengan kasur, bantal, guling dan lemari di tiap kamarnya. Lantai 2 memiliki dapur umum serta dua kamar mandi bersama serta balkon untuk berjemur. Sementara gas pada dapur umum dibayar dengan sistem urunan bersama penghuni lainnya"
+    },
+    {
+        "name": "Kamar Lt. 3",
+        "price": "650k/bulan",
+        "shortdesc": "Dilengkapi dengan kasur, bantal, guling dan lemari. Luas 6x4m",
+        "desc": "Dilengkapi dengan kasur, bantal, guling dan lemari di tiap kamarnya. Lantai 1 memiliki dapur umum serta dua kamar mandi bersama serta area outdoor untuk berkumpul atau berjemur. Sementara gas pada dapur umum dibayar dengan sistem urunan bersama penghuni lainnya"
+    }
+]

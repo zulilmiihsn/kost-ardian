@@ -1,9 +1,10 @@
 "use client";
 import Marquee from "react-fast-marquee";
 import ProfileModal from "@/components/ProfileModal";
+import RoomModal from "@/components/RoomModal";
 import profileData from "@/app/database/profiles.json";
+import roomData from "@/app/database/room.json";
 import { useState, useRef } from "react";
-import { Kamar1, Kamar2, Kamar3 } from "@/components/Modal";
 
 const hoverSounds = () => {
   const audioElement = new Audio("assets/hover.flac");
@@ -34,29 +35,18 @@ export default function Home() {
       }
     }
   };
-  const [modal1, setModal1] = useState(false);
-  function modalClick1() {
-    setModal1(!modal1);
-    clickSounds();
-  }
-
-  const [modal2, setModal2] = useState(false);
-  function modalClick2() {
-    setModal2(!modal2);
-    clickSounds();
-  }
-
-  const [modal3, setModal3] = useState(false);
-  function modalClick3() {
-    setModal3(!modal3);
-    clickSounds();
-  }
 
   const [selectedProfile, setSelectedProfile] = useState(null);
 
-  // Function to handle profile click
   const profileClick = (profile: any) => {
     setSelectedProfile(profile);
+    clickSounds();
+  };
+
+  const [selectedRoom, setSelectedRoom] = useState(null);
+
+  const roomClick = (room: any) => {
+    setSelectedRoom(room);
     clickSounds();
   };
 
@@ -85,10 +75,10 @@ export default function Home() {
           <div className="flex flex-row gap-4">
             {profileData.map((profile) => (
               <button
-                key={profile.id} // Make sure each profile has a unique identifier
+                key={profile.name}
                 onMouseEnter={hoverSounds}
                 onClick={() => profileClick(profile)}
-                className="aspect-square w-48 rounded-xl bg-red-300 flex-none hover:scale-105 transition ease-in-out grid place-content-center"
+                className={`aspect-square w-48 rounded-xl ${profile.bgColor || 'bg-green-300'} flex-none hover:scale-105 transition ease-in-out grid place-content-center`}
               >
                 <img src={profile.imageSrc} alt={profile.name} />
               </button>
@@ -103,16 +93,18 @@ export default function Home() {
         <menu className="flex flex-col justify-around gap-8 px-12 relative">
           <h1 className="text-white text-xl text-center">Tipe Kamar</h1>
           <div className="flex md:flex-row flex-col gap-4 justify-center">
-            <button
-              onClick={modalClick1}
+            {roomData.map((room) => (
+              <button
+              key={room.name}
               onMouseEnter={hoverSounds}
+              onClick={() => roomClick(room)}
               className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out"
-            >
-              <div className="h-4/5 p-8 overflow-hidden">
-                <h1 className="font-bold text-lg">Kamar Lt. 1</h1>
-                <p className="text-lg pr-12 font-semibold">450k/bulan</p>
+              >
+                <div className="h-4/5 p-8 overflow-hidden">
+                <h1 className="font-bold text-lg">{room.name}</h1>
+                <p className="text-lg pr-12 font-semibold">{room.price}</p>
                 <p className="text-lg pr-12">
-                  Dilengkapi dengan kasur, bantal, guling dan lemari. Luas 3x4m
+                  {room.shortdesc}
                 </p>
               </div>
               <div className="h-1/5 flex flex-row border-t items-center justify-between px-8">
@@ -133,72 +125,13 @@ export default function Home() {
                   />
                 </svg>
               </div>
-            </button>
-            <Kamar1 isOpen={modal1} onClose={modalClick1} />
-            <button
-              onClick={modalClick2}
-              onMouseEnter={hoverSounds}
-              className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out"
-            >
-              <div className="h-4/5 p-8 overflow-hidden">
-                <h1 className="font-bold text-lg">Kamar Lt. 2</h1>
-                <p className="text-lg pr-12 font-semibold">550k/bulan</p>
-                <p className="text-lg pr-12">
-                  Dilengkapi dengan kasur, bantal, guling dan lemari. Luas 3x4m
-                </p>
-              </div>
-              <div className="h-1/5 flex flex-row border-t items-center justify-between px-8">
-                <p>Lihat selengkapnya</p>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="group-hover:rotate-90 transition ease-in-out"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M18.5 18V2H2.5V4H15.5L2.5 17L3.5 18L16.5 5V18H18.5ZM18.5 2H15.5V5H18.5V2Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </button>
-            <Kamar2 isOpen={modal2} onClose={modalClick2} />
-            <button
-              onClick={modalClick3}
-              onMouseEnter={hoverSounds}
-              className=" md:w-1/3 h-64 rounded-3xl bg-transparent border text-white text-start group hover:drop-shadow-glow hover:scale-105 transition ease-in-out"
-            >
-              <div className="h-4/5 p-8 overflow-hidden">
-                <h1 className="font-bold text-lg">Kamar Lt. 3</h1>
-                <p className="text-lg pr-12 font-semibold">650k/bulan</p>
-                <p className="text-lg pr-12">
-                  Dilengkapi dengan kasur, bantal, guling dan lemari. Luas 4x6m
-                </p>
-              </div>
-              <div className="h-1/5 flex flex-row border-t items-center justify-between px-8">
-                <p>Lihat selengkapnya</p>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="group-hover:rotate-90 transition ease-in-out"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M18.5 18V2H2.5V4H15.5L2.5 17L3.5 18L16.5 5V18H18.5ZM18.5 2H15.5V5H18.5V2Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </button>
-            <Kamar3 isOpen={modal3} onClose={modalClick3} />
+              </button>
+            ))}
+            <RoomModal
+          isOpen={!!selectedRoom}
+          onClose={() => setSelectedRoom(null)}
+          roomData={selectedRoom || {}}
+        />
           </div>
         </menu>
       </section>
