@@ -5,7 +5,10 @@ interface ProfileModalProps {
     name?: string;
     imageSrc?: string;
     room?: string;
-    desc?: string
+    desc?: string;
+    insta?: string;
+    linkedin?: string;
+    youtube?: string;
   };
 }
 
@@ -51,15 +54,30 @@ export default function ProfileModal({
               Send a message
             </button>
           </div>
-          <div className="h-[70%] p-2 flex flex-row gap-2">
-            <div className="w-[25%]"></div>
-            <div className="w-[75%] flex flex-col pt-10">
+          <div className="h-[70%] p-2 flex flex-row gap-2 pt-14">
+            <div className="w-[25%] flex flex-col gap-2">
+              <button className="h-12 bg-[#D43377] rounded-xl text-white font-semibold flex justify-evenly items-center"><svg className="w-8" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.8513 2.5H15.1486C8.16299 2.5 2.5 8.16299 2.5 15.1486V37.8513C2.5 44.837 8.16299 50.5 15.1486 50.5H37.8513C44.837 50.5 50.5 44.837 50.5 37.8513V15.1486C50.5 8.16299 44.837 2.5 37.8513 2.5Z" stroke="white" stroke-width="4"/>
+<path d="M26.5 37.6892C32.6796 37.6892 37.6892 32.6796 37.6892 26.5C37.6892 20.3204 32.6796 15.3108 26.5 15.3108C20.3204 15.3108 15.3108 20.3204 15.3108 26.5C15.3108 32.6796 20.3204 37.6892 26.5 37.6892Z" stroke="white" stroke-width="4"/>
+<path d="M40.6082 15.473C42.3098 15.473 43.6893 14.0935 43.6893 12.3919C43.6893 10.6902 42.3098 9.31079 40.6082 9.31079C38.9065 9.31079 37.5271 10.6902 37.5271 12.3919C37.5271 14.0935 38.9065 15.473 40.6082 15.473Z" fill="white"/>
+</svg>{profileData.insta}</button>
+              <button className="h-12 bg-[#0177B5] rounded-xl text-white font-semibold flex justify-evenly items-center"><svg className="w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.794028 15.9503H10.7561V47.9979H0.794028V15.9503ZM5.76771 3.43458e-06C8.94592 3.43458e-06 11.5291 2.58773 11.5291 5.7715C11.5291 8.95527 8.94592 11.5493 5.7698 11.5493C4.24094 11.546 2.77561 10.9362 1.69434 9.85348C0.613072 8.77071 0.00387396 7.30304 0 5.7715C-4.50523e-07 5.01305 0.149231 4.26203 0.439162 3.56139C0.729094 2.86075 1.15404 2.22423 1.6897 1.68821C2.22537 1.15219 2.86124 0.727199 3.56098 0.437525C4.26071 0.14785 5.01058 -0.00082397 5.76771 3.43458e-06ZM16.9763 15.9503H26.513V20.3304H26.645C27.9733 17.8119 31.2164 15.1549 36.0728 15.1549C46.1417 15.1549 48 21.7932 48 30.4211V48H38.0631V32.4107C38.0631 28.6959 37.9961 23.9108 32.8967 23.9108C27.7219 23.9108 26.9258 27.9613 26.9258 32.1378V47.9916H16.991V15.944L16.9763 15.9503Z" fill="white"/>
+</svg>{profileData.linkedin}</button>
+              <button className="h-12 bg-[#ED1D24] rounded-xl text-white font-semibold flex justify-evenly items-center"><svg className="w-8" viewBox="0 0 48 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M47.0896 5.78118C46.5501 3.50691 44.7967 1.6875 42.7735 1.08103C38.1877 -0.283537 10.5379 -0.435155 5.27773 1.08103C3.25457 1.6875 1.50117 3.50691 0.961663 5.78118C-0.25223 11.5427 -0.387107 26.2496 0.961663 32.1627C1.50117 34.437 3.25457 36.2564 5.27773 36.8629C10.1333 38.379 37.7831 38.379 42.7735 36.8629C44.7967 36.2564 46.5501 34.437 47.0896 32.1627C48.3035 26.7045 48.3035 11.391 47.0896 5.78118Z" fill="white"/>
+<path d="M19.1699 10.9363V27.0078L31.7135 18.972" fill="#ED1D24"/>
+</svg>{profileData.youtube}</button>
+              <button className="h-12 bg-[#D9D9D9] rounded-xl text-gray-500 font-semibold flex justify-evenly items-center">Locked</button>
+            </div>
+            <div className="w-[75%] flex flex-col">
               <div>
                 <h1 className="text-white text-2xl">{profileData.name}</h1>
                 <h2 className="text-white text-xl">{profileData.room}</h2>
               </div>
               <div>
                 <p className="text-white text-lg">{profileData.desc}</p>
+                <p className="text-white text-lg">{profileData.insta}</p>
               </div>
             </div>
           </div>

@@ -4,48 +4,70 @@
     "room": "Kamar M, Lt. 1",
     "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
     "imageSrc": "/char/1.png",
-    "bgColor": "bg-red-300"
+    "bgColor": "bg-red-300",
+    "insta": "@ds.ayunisa",
+    "linkedin": "Zul Ilmi Ihsan",
+    "youtube": "Zul Ilmi Ihsan"
+
   },
   {
     "name": "Evan",
     "room": "Kamar M, Lt. 1",
     "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
     "imageSrc": "/char/2.png",
-    "bgColor": "bg-blue-400"
+    "bgColor": "bg-blue-400",
+    "insta": "@zulilmiihsn",
+    "linkedin": "Zul Ilmi Ihsan",
+    "youtube": "Zul Ilmi Ihsan"
   },
   {
     "name": "Adit",
     "room": "Kamar M, Lt. 1",
     "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
     "imageSrc": "/char/3.png",
-    "bgColor": "bg-blue-400"
+    "bgColor": "bg-blue-400",
+    "insta": "@zulilmiihsn",
+    "linkedin": "Zul Ilmi Ihsan",
+    "youtube": "Zul Ilmi Ihsan"
   },
   {
     "name": "Ben",
     "room": "Kamar M, Lt. 1",
     "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
     "imageSrc": "/char/2.png",
-    "bgColor": "bg-green-300"
+    "bgColor": "bg-green-300",
+    "insta": "@zulilmiihsn",
+    "linkedin": "Zul Ilmi Ihsan",
+    "youtube": "Zul Ilmi Ihsan"
   },
   {
     "name": "Ananta",
     "room": "Kamar M, Lt. 1",
     "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
     "imageSrc": "/char/2.png",
-    "bgColor": "bg-red-300"
+    "bgColor": "bg-red-300",
+    "insta": "@zulilmiihsn",
+    "linkedin": "Zul Ilmi Ihsan",
+    "youtube": "Zul Ilmi Ihsan"
   },
   {
     "name": "Fransco",
     "room": "Kamar M, Lt. 1",
     "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
     "imageSrc": "/char/1.png",
-    "bgColor": "bg-blue-400"
+    "bgColor": "bg-blue-400",
+    "insta": "@zulilmiihsn",
+    "linkedin": "Zul Ilmi Ihsan",
+    "youtube": "Zul Ilmi Ihsan"
   },
   {
     "name": "Ardian",
     "room": "Kamar M, Lt. 1",
     "desc": "Lorem ipsum dolor sit amet lorem ipsum doolor sit amte lo siento espreinta lorem ipsum dolor sot amet",
     "imageSrc": "/char/3.png",
-    "bgColor": "bg-green-500"
+    "bgColor": "bg-green-500",
+    "insta": "@zulilmiihsn",
+    "linkedin": "Zul Ilmi Ihsan",
+    "youtube": "Zul Ilmi Ihsan"
   }
 ]
